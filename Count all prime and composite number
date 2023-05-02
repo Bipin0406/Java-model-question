@@ -31,3 +31,19 @@ class Main {
 		System.out.println("No of Primes:"+prime+"\nNo of Composite numbers:"+comp);
     }
 }
+
+
+qno 2.
+import java.util.Arrays;
+
+class Main{
+	public static void main(String args[]){
+		int[] a = {12,234,23,45,3};
+		int M = 2;
+		int N = 1;
+		Arrays.sort(a);
+		int max = a[a.length - M];
+		int min = a[N-1];
+		System.out.println("Sum:"+(max+min)+"\nDiffrence:"+(max-min));
+	}
+}
