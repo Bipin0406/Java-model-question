@@ -1,0 +1,32 @@
+import java.io.*;
+
+class Main {
+    public static void main(String args[] ) throws Exception {
+		System.out.println("Enter the numbers:");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line =br.readLine();
+		int comp = 0;
+		int prime = 0;
+		int inp;
+        while(line.length()>0){
+			inp = Integer.parseInt(line);
+			line = br.readLine();
+			int p = 1;
+			for (int i = 2; i<inp; i++){
+				if (inp%i == 0){
+					p = 0;
+					break;
+				}
+			}
+			if (p == 0){
+				comp = comp +1;
+			}
+			else{
+				prime += 1;
+			}
+            
+			
+        }
+		System.out.println("No of Primes:"+prime+"\nNo of Composite numbers:"+comp);
+    }
+}
